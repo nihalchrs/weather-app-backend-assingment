@@ -4,7 +4,7 @@ Backend (Golang)
 1. Clone the Repository
    Clone the backend repository to your local machine using the following command:
 
-git clone https://github.com/nihalchrs/weather-app-backend.git
+git clone https://github.com/nihalchrs/weather-app-backend-assingment.git
 
 2. Create Environment File
    In the backend directory, create a .env file based on the provided env_sample file. Update the environment variables as needed, including your MySQL database configuration.
