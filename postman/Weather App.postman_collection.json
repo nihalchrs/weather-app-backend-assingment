@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "862c82c1-1b52-403f-9f5c-5793eb0b5c9a",
+		"name": "Weather App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11453358"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"nihal\",\n    \"email\": \"nihal@test.com\",\n    \"password\": \"12345678\",\n    \"dob\": \"2024-07-17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"nihal\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weather API's",
+			"item": [
+				{
+					"name": "Weather app",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgsInVzZXJuYW1lIjoibmloYWwxIiwiZW1haWwiOiJuaWhhbDFAZGVsaW1wLmNvbSIsImV4cCI6MTY5NzYxNjYxNCwiaWF0IjoxNjk3NTMwMjE0LCJzdWIiOiJuaWhhbDFAZGVsaW1wLmNvbSJ9.VXKRGASPWynxMVW3dZ5-jGxcmv_bIl-IDEtMwKb_drw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/weather/noida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"noida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weather history",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjYsInVzZXJuYW1lIjoibmloYWwiLCJlbWFpbCI6Im5paGFsQGRlbGltcC5jb20iLCJleHAiOjE2OTc0NzU2ODEsImlhdCI6MTY5NzM4OTI4MSwic3ViIjoibmloYWxAZGVsaW1wLmNvbSJ9.HQJ-AprPg129i1ZEoHjhxyDGYQnQQtMycqea1jQnJA4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/weather-history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit history",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgsInVzZXJuYW1lIjoibmloYWwxIiwiZW1haWwiOiJuaWhhbDFAZGVsaW1wLmNvbSIsImV4cCI6MTY5NzYxNjYxNCwiaWF0IjoxNjk3NTMwMjE0LCJzdWIiOiJuaWhhbDFAZGVsaW1wLmNvbSJ9.VXKRGASPWynxMVW3dZ5-jGxcmv_bIl-IDEtMwKb_drw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": \"New york\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/weather/39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit history Final",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzcsInVzZXJuYW1lIjoibmloYWwiLCJlbWFpbCI6Im5paGFsQGRlbGltcC5jb20iLCJleHAiOjE2OTc2NjA2OTcsImlhdCI6MTY5NzU3NDI5Nywic3ViIjoibmloYWxAZGVsaW1wLmNvbSJ9.wQFkFdH4QTHFOd8QhO8wYWH6ymydYNF2OaQQT1zFjTY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": \"delhi\",\n    \"temp\": 25,\n    \"pressure\": 1012,\n    \"humidity\": 8222\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/weather/37/delhi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"37",
+								"delhi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete History",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgsInVzZXJuYW1lIjoibmloYWwxIiwiZW1haWwiOiJuaWhhbDFAZGVsaW1wLmNvbSIsImV4cCI6MTY5NzYxNjYxNCwiaWF0IjoxNjk3NTMwMjE0LCJzdWIiOiJuaWhhbDFAZGVsaW1wLmNvbSJ9.VXKRGASPWynxMVW3dZ5-jGxcmv_bIl-IDEtMwKb_drw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/weather/38",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk History Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgsInVzZXJuYW1lIjoibmloYWwxIiwiZW1haWwiOiJuaWhhbDFAZGVsaW1wLmNvbSIsImV4cCI6MTY5NzYxNjYxNCwiaWF0IjoxNjk3NTMwMjE0LCJzdWIiOiJuaWhhbDFAZGVsaW1wLmNvbSJ9.VXKRGASPWynxMVW3dZ5-jGxcmv_bIl-IDEtMwKb_drw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[31,34]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/weather/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

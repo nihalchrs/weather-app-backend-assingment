@@ -1,0 +1,9 @@
+DB_USER=root
+DB_PASSWORD=DB_PASSWORD
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=weather-app
+JWT_SECRET=HERE_IS_YOUR_SECRET_KEY
+DB_URL= root:Delimp@123@tcp(127.0.0.1:3306)/weather-app
+OPENWEATHER_API_KEY=19bb90da0d3f72d6c95e902bab9124de
+OPENWEATHER_BASE_URL=http://api.openweathermap.org/data/2.5/weather
